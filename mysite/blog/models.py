@@ -55,4 +55,4 @@ class Comment(models.Model):
         ordering = ('created',)
 
     def __str__(self):
-        return f'Comment by {self.name} on {self.post}'
+        return f'Comentado por {self.name} no post {self.post}'
