@@ -24,8 +24,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
-    objects = models.Manager()  # The default manager.
-    published = PublishedManager()  # The Dahl-specific manager.
+    objects = models.Manager() # The default manager.
+    published = PublishedManager() # The Dahl-specific manager.
 
     tags = TaggableManager()
 
@@ -55,4 +55,4 @@ class Comment(models.Model):
         ordering = ('created',)
 
     def __str__(self):
-        return f'Comentado por {self.name} no post {self.post}'
+        return 'Comment by {} on {}'.format(self.name, self.post)

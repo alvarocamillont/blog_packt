@@ -13,4 +13,5 @@ static3==0.7.0
 pytest
 django-taggit
 Markdown
-haystack
+django-haystack
+pysolr
