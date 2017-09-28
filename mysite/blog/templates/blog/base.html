@@ -14,6 +14,7 @@
     <div id="sidebar">
         <h2>Meu blog</h2>
         <p>Esse é meu blog. Eu escrevi {% total_posts %} post até agora.</p>
+        <p><a href="{% url "blog:post_feed" %}">Assine o feed!</a></p>
         <h3>Ultimos Post</h3>
         {% show_latest_posts 3 %}
         <h3>Posts mais comentados</h3>
